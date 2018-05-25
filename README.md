@@ -2,14 +2,15 @@
 
 Here is the source: https://medium.com/@alexmngn/how-to-better-organize-your-react-applications-2fd3ea1920f1
 
-> `__*Each component, scene or service (a feature) has everything it needs to work on its own*__`, such as its own styles, images, translations, set of actions as well as unit or integration tests. You can see a feature like an independent piece of code you will use in your app (a bit like node modules).
+> __*Each component, scene or service (a feature) has everything it needs to work on its own*__, such as its own styles, images, translations, set of actions as well as unit or integration tests. You can see a feature like an independent piece of code you will use in your app (a bit like node modules).
 
 To work properly, they should follow these rules:
-
+````
 * A component can define nested components or services. It cannot use or define scenes.
 * A scene can define nested components, scenes or services.
 * A service can define nested services. It cannot use or define components or scenes.
 * Nested features can only use from its parent.
+````
 
 *Note*: By parent feature, I mean a parent, grandparent, great-grandparent etc… **You cannot use a feature that is a “cousin”, this is not allowed.** You will need to move it to a parent to use it.
 
